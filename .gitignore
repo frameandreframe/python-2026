@@ -1,0 +1,30 @@
+# 字节码（Python 不生成自忽略）
+__pycache__/
+*.py[cod]
+
+# 工具缓存（ruff / mypy 无自忽略）
+.ruff_cache/
+.mypy_cache/
+
+# 覆盖率产物（无自忽略）
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# 打包产物
+*.egg-info/
+build/
+dist/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 虚拟环境（内部虽有自忽略，仍在此声明）
+.venv/
+
+# pytest 缓存（内部虽有自忽略，仍在此声明）
+.pytest_cache/
