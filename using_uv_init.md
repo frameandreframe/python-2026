@@ -160,3 +160,20 @@ git push -u origin feature/<名字>
 有两个地方需要你在实际执行时替换：`<项目名>`（`uv init` 根据文件夹名自动生成，可在 `pyproject.toml` 的 `name` 字段确认）和 `<用户名>/<仓库名>`。其余命令可以直接照抄。
 
 如果第 6 步 `pytest` 报 `ModuleNotFoundError`，先确认 `uv sync` 已运行、且 `src/` 布局被 `pyproject.toml` 的构建后端识别（`uv init` 生成的配置默认已处理，通常不会出问题）。
+
+
+--- 
+关于 .gitignore的说明
+*：匹配任意字符（不含 /），如 *.pyc。
+
+**：跨目录递归，如 **/logs。
+
+尾部 /：只匹配目录，如 .venv/。
+
+开头 /：锚定到 .gitignore 所在目录，如 /dist 只忽略根下的 dist。
+
+!：取反（取消忽略），如 !important.pyc；注意“父目录被忽略时，! 对子文件无效”。
+
+#：注释。空行忽略。
+
+已提交的文件不受 .gitignore 影响，需 git rm --cached 先取消追踪。
