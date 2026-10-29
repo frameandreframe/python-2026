@@ -1,0 +1,29 @@
+[project]
+name = "python-type"
+version = "0.1.0"
+description = "2026-python-type"
+readme = "README.md"
+authors = [
+    { name = "Wingaming", email = "xuyifan56@h-partners.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "httpx>=0.28.1",
+    "numpy>=2.5.4",
+    "pydantic>=2.14.1",
+]
+
+[project.scripts]
+python-type = "python_type:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.3",
+]
