@@ -28,3 +28,6 @@ Thumbs.db
 
 # pytest 缓存（内部虽有自忽略，仍在此声明）
 .pytest_cache/
+
+
+
